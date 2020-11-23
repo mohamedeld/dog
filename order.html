@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media only srceen and (min-width: 768px){
+            article{
+                width: 350px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="dog.html">Dogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/dog.png" class="one" style=""></aside>
+        <article>
+            <h1>Order</h1>
+            <div class="dog">
+                <img src=""/>
+                <div class="columns">
+                    <div class="title"></div>
+                    <div class="price"></div>
+                </div>
+                <p class="desc"></p>
+            </div>
+         <form action="" method="POST">
+             <div class="input-group">
+                 <div><label for="first-name">First Name</label></div>
+                 <div><input type="text" name="first-name" id="first-name"
+                    placeholder="Enter Your First Name"/></div>
+             </div>
+             <div class="input-group">
+                 <div><label for="last-name">Last Name</label></div>
+                 <div><input type="text" name="last-name" id="last-name"
+                    placeholder="Enter Your Last Name"/></div>
+             </div>
+             <div class="input-group">
+                 <div><label for="address">First Name</label></div>
+                 <div><input type="text" name="address" id="address"
+                    placeholder="Enter Your Address"/></div>
+             </div>
+             <div class="input-group">
+                 <div><label for="post-code">Post Code</label></div>
+                 <div><input type="text" name="post-code" id="post-code"
+                   /></div>
+             </div>
+             <div class="input-group">
+                 <div><label for="comments">Comments</label></div>
+                 <div>
+                     <textarea
+                     name="comments"
+                     id="comments"
+                     cols="30"
+                     rows="10">
+                     </textarea>
+                 </div>
+             </div>
+             <input type="reset" value="Reset"/>
+             <input type="submit" value="Order"/>
+         </form>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="dog.html">Dogs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        window.addEventListener("DomContentLoaded",function(e){
+            const order=localStorage.getItem("order");
+            if(order){
+                const dogOrder=JSON.parse(order);
+                const dog = document.querySelector(".dog");
+                const title = dog.querySelector(".title");
+                const price = dog.querySelector(".price");
+                const desc = dog.querySelector(".desc");
+
+                title.innerText = dogOrder.title;
+                price.innerText = dogOrder.price;
+                desc.innerText = dogOrder.desc;
+
+                const img = dog.querySelector("img");
+                img.setAttribute("src",`images/${dogOrder.id}.jpg`);
+                img.setAttribute("alt",dogOrder.title);
+            }
+        })
+    </script>
+</body>
+</html>

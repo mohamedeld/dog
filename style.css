@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: 'Piazzolla', serif;
+    background-color: #999;
+}
+p{
+    margin: 0.5em 0 0.5em 0;
+}
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a493c0;
+    padding: 10px;
+}
+nav a:visited,
+nav a:link{
+    color: #fff;
+    text-decoration: none;
+}
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+nav > ul >li{
+    display: inline-block;
+     list-style: none;
+     margin: 0 5px 0;
+}
+main{
+    display: block;
+    background-image: url('images/bgc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 85%;
+}
+footer{
+    padding: 15px;
+}
+aside,article{
+    padding: 2em;
+}
+aside{
+    text-align: center;
+}
+article{
+    width: 75%;
+}
+
+h1{
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+.sub-title{
+    background-color: #fff;
+    font-size: 1.5em;
+    padding: 30px;
+    border-radius: 15px;
+}
+.dog1{
+    width: 100%;
+    height: 400px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.columns{
+    display: flex;
+}
+.dog{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    
+}
+.dog img{
+    width: 100%;
+}
+.dog .title{
+    font-weight: bold;
+}
+.dog .price{
+    text-align: right;
+}
+.dog .columns div{
+    width: 50%;
+}
+.dog button{
+    background-color: #f6aeae;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:1px solid #f6aeae;
+    cursor: pointer;
+}
+.input-group{
+    margin-bottom: 20px;
+}
+.input-group input,
+.input-group textarea,
+.input-group select{
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    width: 100%;
+}
+label{
+    font-weight: 600;
+}
+input[type="reset"]{
+    background: transparent;
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+input[type="submit"]{
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+}
+@media only screen and (min-width:768px){
+    main{
+        display: flex;
+    }
+    aside{
+        margin-left: 2%;
+    }
+    
+    .columns-desktop{
+        display: flex;
+    }
+}
